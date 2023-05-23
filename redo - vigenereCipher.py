@@ -15,6 +15,15 @@ def encryption(message, key):
 
 
 # formats the key based on the length of the inputted text
-
+def key_format(message, key):
+    key = list(key)
+    if len(message) == len(key):
+        return(key)
+    else:
+        for i in range(len(message) - len(key)):
+            key.append(key[i % len(key)])
+        return("".join(key))
+    
+    
 # the user type the message and key
 # the output printed is based on the condition met
