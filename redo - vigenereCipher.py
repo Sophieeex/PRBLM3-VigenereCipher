@@ -24,6 +24,10 @@ def key_format(message, key):
             key.append(key[i % len(key)])
         return("".join(key))
     
-    
-# the user type the message and key
+
+# ask user to type the message and key in plain text
+
+message = input("\nEnter Message (all uppercase): ")
+keyword = input("\nEnter Keyword (all uppercase): ")
+
 # the output printed is based on the condition met
