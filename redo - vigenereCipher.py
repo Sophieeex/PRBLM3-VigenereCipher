@@ -5,6 +5,15 @@
 # create a function that provides a value for each character 
 # from the inputted text to generate an encrypted message
 
+def encryption(message, key):
+    encrypt_text = []
+    for i in range(len(message)):
+        value = (ord(message[i]) + ord(key[i])) % 26
+        value += ord("A")
+        encrypt_text.append(chr(value))
+    return ("".join(encrypt_text))
+
+
 # formats the key based on the length of the inputted text
 
 # the user type the message and key
