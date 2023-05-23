@@ -26,8 +26,17 @@ def key_format(message, key):
     
 
 # ask user to type the message and key in plain text
-
-message = input("\nEnter Message (all uppercase): ")
-keyword = input("\nEnter Keyword (all uppercase): ")
-
 # the output printed is based on the condition met
+
+is_lower = True
+while True:
+    message = input("\nEnter Message (all uppercase): ")
+    keyword = input("\nEnter Keyword (all uppercase): ")
+    if message.isupper() and keyword.isupper():
+        is_lower == False
+        key = key_format(message, keyword)
+        encrypt_text = encryption(message, key)
+        print("\033[1m", "\nEncrypted message:", encrypt_text)
+        break
+    else:
+        print("Invalid input, please try again.")
